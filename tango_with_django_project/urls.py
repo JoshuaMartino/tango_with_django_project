@@ -21,7 +21,7 @@ from rango import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('', views.about,name="about"),
-    path('', views.picture, name ='picture' ),
+    path('', views.picture, name ='picture'),
     path('rango/', include('rango.urls')),
     path('admin/', admin.site.urls),
 ]
