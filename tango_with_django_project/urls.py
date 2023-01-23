@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 from rango import views
-
+app_name = 'rango'
 urlpatterns = [
     path('', views.index, name='index'),
-    path('', views.about,name="about"),
-    path('', views.picture, name ='picture'),
+    path('about/', views.about, name ='about'),
+    path('picture/', views.picture, name ='picture'),
     path('rango/', include('rango.urls')),
     path('admin/', admin.site.urls),
 ]
