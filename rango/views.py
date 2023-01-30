@@ -81,7 +81,6 @@ def about(request):
     else:
         count =0
 
-    print(count)
     return render(request, 'rango/about.html', context={'visits':count})
     #return HttpResponse("Rango says here is the about page (<a href= '/rango/'>Index</a>)) \n Here is the picture (<a href= '/rango/picture/'>Picture</a>))")
 
