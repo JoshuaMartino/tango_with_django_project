@@ -1,15 +1,15 @@
 {% extends 'rango/base.html' %} 
 {% load staticfiles %} 
 {% block  title_block %} 
-  <h1>Information</h1>
+  <h1>Visits</h1>
 {% endblock %}
 
 {% block body_block %} 
     {% if visits %} 
-    <h2>Visit</h2>
+    <h2>visits</h2>
             <ul>
                 
-                    {{ visits }}
+                    Visits: {{ visits }}
                 
             </ul>
         {% else %}

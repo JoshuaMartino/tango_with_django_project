@@ -76,10 +76,14 @@ def picture(request):
     return render(request, 'rango/picture.html', context=context_dict)
 
 def about(request):
-    context_dict = {}
-    context_dict['visits'] = request.session['visits']
-    return render(request, 'rango/about.html', context=context_dict)
-    return HttpResponse("Rango says here is the about page (<a href= '/rango/'>Index</a>)) \n Here is the picture (<a href= '/rango/picture/'>Picture</a>))")
+    if request.session.get('visits'):
+        count = request.session.get('visits')
+    else:
+        count =0
+
+    print(count)
+    return render(request, 'rango/about.html', context={'visits':count})
+    #return HttpResponse("Rango says here is the about page (<a href= '/rango/'>Index</a>)) \n Here is the picture (<a href= '/rango/picture/'>Picture</a>))")
 
 def add_page(request, category_name_slug):
     try:
