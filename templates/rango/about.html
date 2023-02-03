@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block body_block %} 
+    This tutorial has been put together by Joshua Luke Martino
     {% if visits %} 
     <h2>visits</h2>
             <ul>
@@ -15,4 +16,14 @@
         {% else %}
             <strong>There are no visits present.</strong>
             {% endif %}
+
+            
+           
+           <img src="{% static 'images/rango.png' %}"alt="Picture of Rango" />
+           <img src= "{{ MEDIA_URL }}cat.jpg" alt ="Picture of a Cat." />
+           
+         
+
+        
+      
 {% endblock %}
